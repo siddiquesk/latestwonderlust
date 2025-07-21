@@ -1,0 +1,121 @@
+* {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden !important;
+}
+.container {
+  flex: 1;
+}
+.navbar {
+  height: 5rem;
+}
+.fa-compass {
+  color: #f2424d;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.nav-link {
+  font-size: 1.2rem !important;
+  margin-left: 0.5rem !important;
+}
+
+.heading {
+  position: relative;
+  left: 2rem;
+  top: 10px;
+}
+/* Mobile View Adjustments */
+@media (max-width: 500px) {
+  .nav-change {
+    margin-top: 100px;
+  }
+  .navbar-nav {
+    display: flex !important;
+    align-items: flex-start !important;
+    margin-top: 30px !important;
+    line-height: 1.2rem !important;
+  }
+
+  #loginpage {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    padding-bottom: 30px !important;
+    position: relative !important;
+    bottom: 70px !important;
+  }
+  #filter {
+    margin-top: 100px !important;
+    position: relative !important;
+    left: 60px !important;
+  }
+  #new-btns {
+    background-color: #fe424d !important;
+    color: white !important;
+  }
+}
+
+
+#gap-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem !important;
+  justify-content: center;
+  margin-top: 22px !important;
+}
+.listing-card {
+  border: none !important;
+}
+.card-img-top {
+  border-radius: 1rem;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+.card-body {
+  padding: 0 !important;
+  line-height: 1rem !important;
+}
+.listing-link {
+  text-decoration: none;
+  margin-left: 40px;
+}
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: rgb(255, 255, 255);
+}
+.show-img {
+  width: 30vw !important;
+  height: 30vh !important;
+}
+#newtitle {
+  color: maroon;
+}
+.show-img {
+  width: 100% !important;
+  height: 400px !important; /* Maintain aspect ratio */
+  object-fit: cover !important; /* Optional: crop image nicely */
+  padding-bottom: 10px !important;
+  border: none !important;
+}
+
+.card-review {
+  display: flex !important;
+  margin: 0px 14px !important;
+  width: 300px !important;
+  flex-wrap: wrap !important;
+  box-shadow: 5px 5px 3px #cccccc;
+}
+#map {
+  width: 55vw;
+  height: 60vh;
+  border-radius: 8px;
+}

@@ -1,0 +1,58 @@
+
+<style>
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      z-index: 999;
+      position: relative;
+    }
+  }
+</style>
+
+<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom sticky-top shadow-sm px-4">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold text-primary" href="/listings">
+      <i class="fa-regular fa-compass"></i>
+    </a>
+
+    <!-- Toggler Button for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse bg-white p-3 rounded shadow-sm" id="navbarNav">
+      <!-- Left Side: Explore -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/listings">Explore</a>
+        </li>
+      </ul>
+
+      <!-- Right Side: Add New + Auth Links -->
+      <ul class="navbar-nav ms-auto align-items-center" id="loginpage">
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/new">Add New Listing</a>
+        </li>
+
+        <% if (!currUser) { %>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-dark" href="/signup">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-dark" href="/login">Login</a>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-dark" href="/logout">LogOut</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

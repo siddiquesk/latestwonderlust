@@ -1,0 +1,47 @@
+<% layout("/layouts/boilerplate.ejs") %>
+  <style>
+    .listing-card:hover {
+      transform: translateY(-4px);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .object-fit-cover {
+      object-fit: cover;
+    }
+
+    #image-overlay:hover {
+      opacity: 0.8;
+    }
+
+    /* Remove border-radius from image completely */
+    .card-img-top {
+      border-radius: 0 !important;
+    }
+  </style>
+
+  <div class="container my-5">
+    <div class="row g-4">
+      <% for(let listing of listings) { %>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <a href="/listings/<%= listing._id %>" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm position-relative listing-card overflow-hidden rounded-4">
+              <div class="position-relative">
+                <img src="<%= listing.image.url %>" id="image-overlay" class="card-img-top object-fit-cover"
+                  style="height: 260px;" alt="listing-image">
+              </div>
+              <div class="card-body p-4 d-flex flex-column justify-content-end">
+                <p class="card-title fw-semibold mb-2">
+                  <%= listing.title %>
+                </p>
+                <p class="card-text mt-2">
+                  &#8377;&nbsp;<%= listing.price ? listing.price.toLocaleString("en-IN") : 0 %>/night
+                    <i class="text-info">+18% GST</i>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <% } %>
+    </div>
+  </div>
