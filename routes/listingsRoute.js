@@ -49,7 +49,7 @@ router.post(
 router.get("/listings/:id", showListing);
 
 // Show all listings
-router.get("/", getDataListing);
+router.get("/listings", getDataListing);
 
 // Show edit form
 router.get("/listings/:id/edit", isLoggedIn, isOwner, editForm);
