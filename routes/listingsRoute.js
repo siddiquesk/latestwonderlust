@@ -49,7 +49,7 @@ router.post(
 router.get("/listings/:id", showListing);
 
 // Show all listings
-router.get("/listings", getDataListing);
+router.get("/", getDataListing);
 
 // Show edit form
 router.get("/listings/:id/edit", isLoggedIn, isOwner, editForm);
@@ -96,4 +96,3 @@ router.post(
 router.get("/logout", logout);
 
 module.exports = router;
-
